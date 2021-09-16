@@ -10,7 +10,7 @@ fi
 for url in "$@"; do
 
     # Generate GitHub repository URL
-    url=`sed -e 's@^[A-Za-z0-9-][A-Za-z0-9-]*/[A-Za-z0-9-][A-Za-z0-9-]*$@https://github.com/&@' <<< "$url"`
+    url=`sed -e 's@^[A-Za-z0-9-][A-Za-z0-9-]*/[A-Za-z0-9-][\.A-Za-z0-9-]*$@https://github.com/&@' <<< "$url"`
 
     # Fetch README page
     echo "Fetching: $url"
